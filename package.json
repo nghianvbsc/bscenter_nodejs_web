@@ -1,0 +1,32 @@
+{
+  "name": "bscenter_node",
+  "version": "1.0.0",
+  "description": "trang chu bscenter",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/nghianv13/bscenter_node.git"
+  },
+  "keywords": [
+    "bscenter",
+    "home"
+  ],
+  "author": "nghianv",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/nghianv13/bscenter_node#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "ddos": "^0.1.11",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "moment-timezone": "^0.5.6",
+    "mongoose": "^4.6.3",
+    "socket.io": "^1.5.0",
+    "validator": "^6.0.0"
+  }
+}

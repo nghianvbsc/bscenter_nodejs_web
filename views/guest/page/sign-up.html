@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title><%= currentRender.title %></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/templates/admin/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/templates/admin/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="/templates/admin/css/style.css" rel="stylesheet">
+    <link href="/templates/admin/css/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/templates/admin/js/jquery.js"></script>
+    <script src="/templates/admin/js/bootstrap.min.js"></script>
+    <script src="/templates/intalize/js/base_function.js"></script>
+    <script src="/templates/guest/js/custom.js"></script>
+    <script src="/templates/all/js/blockUI/jquery.blockUI.js"></script>
+</head>
+
+<body>
+
+<!-- **********************************************************************************************************************************************************
+MAIN CONTENT
+*********************************************************************************************************************************************************** -->
+<div id="loading" style="display: none; position: fixed; width: 100%; height: 100%; z-index: 999999"></div>
+
+<div id="login-page">
+    <div class="container">
+        <div class="row">
+            <div style="padding-top: 20px;" id="notifies" class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+
+            </div>
+        </div>
+
+        <form style="margin-top: 5px" class="form-sign-up" id="form-sign-up">
+            <h2 class="form-sign-up-heading">sign up now</h2>
+            <div class="sign-up-wrap">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="firstname">First Name</label>
+                        <input required id="firstname" name="firstName" type="text" class="form-control" placeholder=""
+                               autofocus>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="lastname">Last Name</label>
+                        <input required id="lastname" name="lastName" type="text" class="form-control" placeholder="">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="username">User Name</label>
+                        <input required id="username" name="userName" type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="password">Password</label>
+                        <input required id="password" name="password" type="password" class="form-control"
+                               placeholder="">
+                    </div>
+
+                    <div class="col-lg-3">
+                        <label for="passwordcf">Confirm Password </label>
+                        <input required id="passwordcf" name="passwordCf" type="password" class="form-control"
+                               placeholder="">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label for="email">Email</label>
+                        <input required id="email" name="email" type="email" class="form-control" placeholder="">
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="phone">Phone</label>
+                        <input required id="phone" name="phone" type="text" class="form-control" placeholder="">
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label for="address">Address</label>
+                        <input required id="address" name="address" type="text" class="form-control" placeholder="">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <p>Gender</p>
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <input style="width: 15px;display: inline;background: transparent;height: 15px;"
+                                       name="gender"
+                                       value="1" type="radio" class="form-control"
+                                       placeholder=""
+                                       id="male" required>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="col-lg-5">
+                                <input style="width: 15px;display: inline;background: transparent;height: 15px;"
+                                       name="gender"
+                                       id="female"
+                                       value="0" type="radio" class="form-control"
+                                       placeholder="">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="birthday">Birth Day</label>
+                        <input required id="birthday" name="birthday" type="text" class="form-control" placeholder="">
+                    </div>
+
+                    <div class="col-lg-5">
+                        <label for="confirm">Confirm</label><br>
+                        <input id="confirm" required type="checkbox">
+                        <label for="confirm">Agree to our terms and conditions and privacy policy</label>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <button class="sign-up-btn" type="submit">Sign Up!</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<script !src="">
+    $('#form-sign-up').on('submit', function () {
+        signUp($(this).serialize());
+        return false;
+    })
+</script>
+
+<!--BACKSTRETCH-->
+<!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+<script type="text/javascript" src="/templates/admin/js/jquery.backstretch.min.js"></script>
+<script>
+    $.backstretch("/templates/admin/img/login-bg.jpg", {speed: 500});
+</script>
+
+
+</body>
+</html>
